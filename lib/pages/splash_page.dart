@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_codelab_p3/pages/list_page.dart';
+import 'package:flutter_codelab_p3/pages/landing_page.dart';
 
 const Color mainThemeColor = Color(0xFF272D8D);
 
@@ -12,7 +12,7 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => ListPage()),
+          MaterialPageRoute(builder: (context) => LandingPage()),
           (route) => false);
     });
     return Stack(

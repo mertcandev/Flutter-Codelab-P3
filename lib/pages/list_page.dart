@@ -46,6 +46,8 @@ class ListPage extends StatelessWidget {
             children: [
               Expanded(
                 child: ListView.builder(
+                  physics: BouncingScrollPhysics(
+                      parent: AlwaysScrollableScrollPhysics()),
                   itemCount: attractionsList.length,
                   itemBuilder: (context, index) {
                     Attraction attr = attractionsList[index];
@@ -54,7 +56,8 @@ class ListPage extends StatelessWidget {
                   },
                 ),
               ),
-              BottomBarWidget()            ],
+              BottomBarWidget()
+            ],
           ),
         ),
       ),
